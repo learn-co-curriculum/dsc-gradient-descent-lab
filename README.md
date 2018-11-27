@@ -185,8 +185,7 @@ iters = 0 #iteration counter
     rss_survey_region = [np.sqrt(rss(m)) for m in x_survey_region]
     gradient = np.gradient(rss_survey_region)[50] 
     
-    #Update the current gradient
-    cur_x -= gamma * gradient #Move opposite the gradient
+    #Update the current x, by taking a "alpha sized" step in the direction of the gradient
 
     #Update the iteration number
 

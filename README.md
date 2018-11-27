@@ -194,9 +194,9 @@ As you can see, this is a simple cost function. The minimum is clearly around 1.
 
 
 ```python
-cur_x = 1.5 # The algorithm starts at x=2
-gamma = 1*10**(-7) # step size multiplier
-print(gamma)
+cur_x = 1.5 # The algorithm starts at x=1.5
+alpha = 1*10**(-7) # step size multiplier
+print(alpha)
 precision = 0.0000000001
 previous_step_size = 1 
 max_iters = 10000 # maximum number of iterations
@@ -212,12 +212,12 @@ while (previous_step_size > precision) & (iters < max_iters):
     x_survey_region = np.linspace(start = cur_x - previous_step_size , stop = cur_x + previous_step_size , num = 101)
     rss_survey_region = [np.sqrt(rss(m)) for m in x_survey_region]
     gradient = np.gradient(rss_survey_region)[50] 
-    cur_x -= gamma * gradient #Move opposite the gradient
+    cur_x -= alpha * gradient #Move opposite the gradient
     previous_step_size = abs(cur_x - prev_x)
     iters+=1
 
 print("The local minimum occurs at", cur_x)
-#The output for the above will be: ('The local minimum occurs at', 2.2499646074278457)
+#The output for the above will be: ('The local minimum occurs at', 1.1124498053361267)
 ```
 
     1e-07

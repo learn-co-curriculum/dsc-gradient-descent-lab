@@ -1,5 +1,5 @@
 
-## Gradient Descent Lab
+# Gradient Descent - Lab
 
 ## Introduction
 

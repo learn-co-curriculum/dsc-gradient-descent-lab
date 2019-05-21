@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lab, we'll continue to formalize our work with gradient descent and once again practice coding some implementations, starting with a review of linear regression. In the upcoming labs, you'll apply similar procedures to implement logistic regression on your own.
+In this lab, you'll continue to formalize your knowledge of gradient descent by coding the algorithm yourself. In the upcoming labs, you'll apply similar procedures to implement logistic regression on your own.
 
 ## Objectives
 You will be able to:
@@ -11,9 +11,9 @@ You will be able to:
 
 ## Using Gradient Descent to Minimize OLS
 
-In order to practice gradient descent, lets begin by investigating a simple regression case in which we are looking to minimize the Residual Sum of Squares (RSS) between our predictions and the actual values. Remember that this is referred to Ordinary Least Squares (OLS) regression. Below, is a mock dataset that we will work with. Preview the dataset. Then, we will compare to simplistic models. Finally, we will use gradient descent to improve upon these  initial models.
+In order to practice gradient descent, you'll investigate a simple regression case in which you're looking to minimize the Residual Sum of Squares (RSS) between the predictions and the actual values. Remember that this is referred to Ordinary Least Squares (OLS) regression. Below, is a mock dataset that to work with. Preview the dataset. Then, you'll compare two simplistic models. From there, you'll use gradient descent to improve upon these  initial models.
 
-Good luck!
+## Loading the Dataset
 
 
 ```python
@@ -88,10 +88,10 @@ df.head()
 
 ## Two Simplistic Models
 
-Let's imagine someone is attempting to predict the domestic gross sales of a movie based on the movie's budget, or at least further investigate how these two quantities are related. Two models are suggested, and need to be compared.  
+Imagine someone is attempting to predict the domestic gross sales of a movie based on the movie's budget, or at least further investigate how these two quantities are related. Two models are suggested, and need to be compared.  
 The two models are:  
-$domgross = 1.575 \bullet budget$  
-$domgross = 1.331 \bullet budget$  
+$\text{domgross} = 1.575 \cdot \text{budget}$  
+$\text{domgross} = 1.331 \cdot \text{budget}$  
 Here's a graph of the two models along with the actual data:
 
 
@@ -123,8 +123,8 @@ plt.legend(bbox_to_anchor=(1,1))
 
 ## Error/Loss Functions
 
-In compare the two models (and future ones), we need to define a metric for evaluating and comparing models to each other. Traditionally this is the residual sum of squares. As such we are looking to minimize  $ \sum(\hat{y}-y)^2$.
-Write a function **rss(m)** which calculates the residual sum of squares for a simplistic model $domgross = m \bullet budget$.
+In order to compare the two models (and future ones), a metric for evaluating and comparing models to each other is needed. Traditionally this is the residual sum of squares. As such you are looking to minimize  $ \sum(\hat{y}-y)^2$.
+Write a function **rss(m)** which calculates the residual sum of squares for a simplistic model $\text{domgross} = m \cdot \text{budget}$.
 
 
 ```python
@@ -147,7 +147,7 @@ Which of the two models is better?
 
 ## Gradient Descent
 
-Now that we have a loss function, we can use numerical methods to find a minimum to the loss function. By minimizing our loss, we have achieved an optimal solution according to our problem formulation. Here's our outline of gradient descent from the previous lesson:  
+Now that you have a loss function, you can use numerical methods to find a minimum to the loss function. By minimizing the loss function, you have achieved an optimal solution according to the problem formulation. Here's the outline of gradient descent from the previous lesson:  
 
 1. Define initial parameters:
     1. pick a starting point
@@ -158,14 +158,14 @@ Now that we have a loss function, we can use numerical methods to find a minimum
 3. Take a step (of size alpha) in the direction of the gradient
 4. Repeat steps 2 and 3 until the maximum number of iterations is met, or the difference between two points is less then your precision parameter  
 
-To start, lets simply visualize our cost function. Plot the cost function output for a range of m values from -3 to 5.
+To start, visualize the cost function. Plot the cost function output for a range of m values from -3 to 5.
 
 
 ```python
 #Your code here
 ```
 
-As you can see, this is a simple cost function. The minimum is clearly around 1. With that, let's try and implement gradient descent in order to find our optimal value for m.
+As you can see, this is a simple cost function. The minimum is clearly around 1. With that, it's time to implement gradient descent in order to find the optimal value for m.
 
 
 ```python

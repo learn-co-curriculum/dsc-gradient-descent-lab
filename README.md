@@ -153,7 +153,7 @@ Now that you have a loss function, you can use numerical methods to find a minim
     1. pick a starting point
     2. pick a step size $\alpha$ (alpha)
     3. choose a maximum number of iterations; the algorithm will terminate after this many iterations if a minimum has yet to be found
-    4. (optionally) define a precision parameter; similar to the maximum number of iterations, this will terminate the algorithm early. For example, one might define a precision parameter of 0.00001, in which case if the change in the loss function were less then 0.00001, the algorithm would terminate. The idea is that we are very close to the bottom and further iterations would make a negligable difference.
+    4. (optionally) define a precision parameter; similar to the maximum number of iterations, this will terminate the algorithm early. For example, one might define a precision parameter of 0.00001, in which case if the change in the loss function were less then 0.00001, the algorithm would terminate. The idea is that we are very close to the bottom and further iterations would make a negligible difference.
 2. Calculate the gradient at the current point (initially, the starting point)
 3. Take a step (of size alpha) in the direction of the gradient
 4. Repeat steps 2 and 3 until the maximum number of iterations is met, or the difference between two points is less then your precision parameter  

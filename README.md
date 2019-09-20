@@ -140,7 +140,7 @@ Which of the two models is better?
 
 
 ```python
-#Your code here
+# Your code here
 print('Model 1 RSS:', rss(1.575))
 print('Model 2 RSS:', rss(1.331))
 ```
@@ -151,8 +151,10 @@ print('Model 2 RSS:', rss(1.331))
 
 
 ```python
-#Your response here
+# Your response here
+"""
 The second model is mildly better.
+"""
 ```
 
 ## Gradient Descent
@@ -172,7 +174,7 @@ To start, visualize the cost function. Plot the cost function output for a range
 
 
 ```python
-#Your code here
+# Your code here
 x = np.linspace(start=-3, stop=5, num=10**3)
 y = [rss(xi) for xi in x]
 plt.plot(x, y)

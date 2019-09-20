@@ -229,7 +229,7 @@ Write a function **rss(m)** which calculates the residual sum of squares for a s
 
 ```python
 def rss(m, X=df.budget, y=df.domgross):
-    #Your code here
+    pass
 ```
 
 
@@ -247,18 +247,18 @@ Which of the two models is better?
 
 
 ```python
-#Your code here
+# Your code here
 ```
 
 
 ```python
-#Your response here
+# Your response here
 ```
 
 
 ```python
 # __SOLUTION__ 
-#Your code here
+# Your code here
 print('Model 1 RSS:', rss(1.575))
 print('Model 2 RSS:', rss(1.331))
 ```
@@ -270,8 +270,10 @@ print('Model 2 RSS:', rss(1.331))
 
 ```python
 # __SOLUTION__ 
-#Your response here
+# Your response here
+"""
 The second model is mildly better.
+"""
 ```
 
 ## Gradient Descent
@@ -291,13 +293,13 @@ To start, visualize the cost function. Plot the cost function output for a range
 
 
 ```python
-#Your code here
+# Your code here
 ```
 
 
 ```python
 # __SOLUTION__ 
-#Your code here
+# Your code here
 x = np.linspace(start=-3, stop=5, num=10**3)
 y = [rss(xi) for xi in x]
 plt.plot(x, y)
@@ -388,7 +390,7 @@ Replot the RSS cost curve as above. Add a red dot for the minimum of this graph 
 
 
 ```python
-#Your code here
+# Your code here
 ```
 
 

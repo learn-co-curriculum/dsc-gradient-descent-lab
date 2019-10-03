@@ -11,7 +11,7 @@ You will be able to:
 
 ## Using Gradient Descent to Minimize OLS
 
-In order to practice gradient descent, you'll investigate a simple regression case in which you're looking to minimize the Residual Sum of Squares (RSS) between the predictions and the actual values. Remember that this is referred to Ordinary Least Squares (OLS) regression. Below, is a mock dataset that to work with. Preview the dataset. Then, you'll compare two simplistic models. From there, you'll use gradient descent to improve upon these  initial models.
+To practice gradient descent, you'll investigate a simple regression case in which you're looking to minimize the Residual Sum of Squares (RSS) between the predictions and the actual values. Remember that this is referred to as Ordinary Least Squares (OLS) regression. Below, is a mock dataset that to work with. Preview the dataset. Then, you'll compare two simplistic models. From there, you'll use gradient descent to improve upon these  initial models.
 
 ## Loading the Dataset
 
@@ -88,7 +88,7 @@ df.head()
 
 ## Two Simplistic Models
 
-Imagine someone is attempting to predict the domestic gross sales of a movie based on the movie's budget, or at least further investigate how these two quantities are related. Two models are suggested, and need to be compared.  
+Imagine someone is attempting to predict the domestic gross sales of a movie based on the movie's budget, or at least further investigate how these two quantities are related. Two models are suggested and need to be compared.  
 The two models are:  
 $\text{domgross} = 1.575 \cdot \text{budget}$  
 $\text{domgross} = 1.331 \cdot \text{budget}$  
@@ -123,7 +123,7 @@ plt.legend(bbox_to_anchor=(1,1))
 
 ## Error/Loss Functions
 
-In order to compare the two models (and future ones), a metric for evaluating and comparing models to each other is needed. Traditionally this is the residual sum of squares. As such you are looking to minimize  $ \sum(\hat{y}-y)^2$.
+To compare the two models (and future ones), a metric for evaluating and comparing models to each other is needed. Traditionally this is the residual sum of squares. As such you are looking to minimize  $ \sum(\hat{y}-y)^2$.
 Write a function **rss(m)** which calculates the residual sum of squares for a simplistic model $\text{domgross} = m \cdot \text{budget}$.
 
 
@@ -153,7 +153,7 @@ Now that you have a loss function, you can use numerical methods to find a minim
     1. pick a starting point
     2. pick a step size $\alpha$ (alpha)
     3. choose a maximum number of iterations; the algorithm will terminate after this many iterations if a minimum has yet to be found
-    4. (optionally) define a precision parameter; similar to the maximum number of iterations, this will terminate the algorithm early. For example, one might define a precision parameter of 0.00001, in which case if the change in the loss function were less then 0.00001, the algorithm would terminate. The idea is that we are very close to the bottom and further iterations would make a negligible difference.
+    4. (optionally) define a precision parameter; similar to the maximum number of iterations, this will terminate the algorithm early. For example, one might define a precision parameter of 0.00001, in which case if the change in the loss function were less than 0.00001, the algorithm would terminate. The idea is that we are very close to the bottom and further iterations would make a negligible difference.
 2. Calculate the gradient at the current point (initially, the starting point)
 3. Take a step (of size alpha) in the direction of the gradient
 4. Repeat steps 2 and 3 until the maximum number of iterations is met, or the difference between two points is less then your precision parameter  
@@ -185,7 +185,7 @@ iters = 0 #iteration counter
     rss_survey_region = [np.sqrt(rss(m)) for m in x_survey_region]
     gradient = np.gradient(rss_survey_region)[50] 
     
-    #Update the current x, by taking a "alpha sized" step in the direction of the gradient
+    #Update the current x, by taking an "alpha sized" step in the direction of the gradient
 
     #Update the iteration number
 
@@ -202,4 +202,4 @@ Replot the RSS cost curve as above. Add a red dot for the minimum of this graph 
 
 ## Summary 
 
-In this lab you coded up a gradient descent algorithm from scratch! In the next lab, you'll apply this to logistic regression in order to create a full implementation yourself!
+In this lab, you coded up a gradient descent algorithm from scratch! In the next lab, you'll apply this to logistic regression in order to create a full implementation yourself!

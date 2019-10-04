@@ -7,7 +7,7 @@ In this lab, you'll continue to formalize your knowledge of gradient descent by 
 
 ## Objectives
 You will be able to:
-* Create a full gradient descent algorithm
+- Create a full gradient descent algorithm
 
 ## Using Gradient Descent to Minimize OLS
 
